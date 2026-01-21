@@ -5,7 +5,8 @@ import rnaouss.cnam.shop.model.CartItem;
 import rnaouss.cnam.shop.model.CartItemId;
 import rnaouss.cnam.shop.repo.CartItemRepository;
 import java.util.UUID;
-
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import java.util.List;
 
 @RestController
@@ -33,6 +34,7 @@ public class CartController {
         return repo.findById(id)
                 .map(existing -> {
                     existing.setQuantity(existing.getQuantity() + qty);
+                    log.info("ADD_ITEM cartId={} productId={} qty={}", cartId, req.productId(), req.quantity());
                     return repo.save(existing);
                 })
                 .orElseGet(() -> repo.save(new CartItem(cartId, req.productId(), qty)));
@@ -62,20 +64,26 @@ public class CartController {
     public CheckoutResponse checkout(@PathVariable String cartId) {
 
         List<CartItem> items = repo.findByCartId(cartId);
+
         if (items == null || items.isEmpty()) {
+            log.warn("CHECKOUT_EMPTY cartId={}", cartId);
             return new CheckoutResponse(null, 0, "Cart is empty");
         }
 
-        String orderId = UUID.randomUUID().toString();
-
+        String orderId = "ORD-" + System.currentTimeMillis();
         int cleared = items.size();
+
+        log.info("CHECKOUT_START cartId={} orderId={} items={}", cartId, orderId, cleared);
+
         repo.deleteAll(items);
+
+        log.info("CHECKOUT_DONE cartId={} orderId={} cleared={}", cartId, orderId, cleared);
 
         return new CheckoutResponse(orderId, cleared, "OK");
     }
 
     public record CheckoutResponse(String orderId, int itemsCleared, String message) {}
-
+    private static final Logger log = LoggerFactory.getLogger(CartController.class);
  
 
     
