@@ -4,6 +4,7 @@ import org.springframework.web.bind.annotation.*;
 import rnaouss.cnam.shop.model.CartItem;
 import rnaouss.cnam.shop.model.CartItemId;
 import rnaouss.cnam.shop.repo.CartItemRepository;
+import java.util.UUID;
 
 import java.util.List;
 
@@ -53,4 +54,30 @@ public class CartController {
     public void remove(@PathVariable String cartId, @PathVariable Long productId) {
         repo.deleteById(new CartItemId(cartId, productId));
     }
+    
+    
+   
+
+    @PostMapping("/{cartId}/checkout")
+    public CheckoutResponse checkout(@PathVariable String cartId) {
+
+        List<CartItem> items = repo.findByCartId(cartId);
+        if (items == null || items.isEmpty()) {
+            return new CheckoutResponse(null, 0, "Cart is empty");
+        }
+
+        String orderId = UUID.randomUUID().toString();
+
+        int cleared = items.size();
+        repo.deleteAll(items);
+
+        return new CheckoutResponse(orderId, cleared, "OK");
+    }
+
+    public record CheckoutResponse(String orderId, int itemsCleared, String message) {}
+
+ 
+
+    
+
 }
