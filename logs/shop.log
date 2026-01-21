@@ -1,0 +1,43 @@
+2026-01-21T20:06:13.480+02:00  INFO 11916 --- [shop] [main] rnaouss.cnam.shop.ShopApplication        : Starting ShopApplication using Java 21.0.9 with PID 11916 (C:\Users\Admin\Documents\CNAM\shop\target\classes started by Admin in C:\Users\Admin\Documents\CNAM\shop)
+2026-01-21T20:06:13.482+02:00  INFO 11916 --- [shop] [main] rnaouss.cnam.shop.ShopApplication        : No active profile set, falling back to 1 default profile: "default"
+2026-01-21T20:06:14.324+02:00  INFO 11916 --- [shop] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-01-21T20:06:14.366+02:00  INFO 11916 --- [shop] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 35 ms. Found 2 JPA repository interfaces.
+2026-01-21T20:06:15.033+02:00  INFO 11916 --- [shop] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
+2026-01-21T20:06:15.045+02:00  INFO 11916 --- [shop] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-01-21T20:06:15.046+02:00  INFO 11916 --- [shop] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.15]
+2026-01-21T20:06:15.175+02:00  INFO 11916 --- [shop] [main] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 1638 ms
+2026-01-21T20:06:15.411+02:00  INFO 11916 --- [shop] [main] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-01-21T20:06:15.454+02:00  INFO 11916 --- [shop] [main] org.hibernate.orm.core                   : HHH000001: Hibernate ORM core version 7.2.0.Final
+2026-01-21T20:06:15.847+02:00  INFO 11916 --- [shop] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-01-21T20:06:15.872+02:00  INFO 11916 --- [shop] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-01-21T20:06:21.090+02:00  INFO 11916 --- [shop] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@58f97013
+2026-01-21T20:06:21.096+02:00  INFO 11916 --- [shop] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-01-21T20:06:22.469+02:00  INFO 11916 --- [shop] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:mysql://dbcnamrnaouss-isae-0713.j.aivencloud.com:13228/defaultdb?sslMode=REQUIRED]
+	Database driver: MySQL Connector/J
+	Database dialect: MySQLDialect
+	Database version: 8.0.35
+	Default catalog/schema: defaultdb/undefined
+	Autocommit mode: undefined/unknown
+	Isolation level: REPEATABLE_READ [default REPEATABLE_READ]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-01-21T20:06:23.110+02:00  INFO 11916 --- [shop] [main] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-01-21T20:06:24.330+02:00  INFO 11916 --- [shop] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-01-21T20:06:24.456+02:00  INFO 11916 --- [shop] [main] o.s.d.j.r.query.QueryEnhancerFactories   : Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-01-21T20:06:24.633+02:00  WARN 11916 --- [shop] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-01-21T20:06:25.005+02:00  INFO 11916 --- [shop] [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 3 endpoints beneath base path '/actuator'
+2026-01-21T20:06:25.066+02:00  INFO 11916 --- [shop] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8080 (http) with context path '/'
+2026-01-21T20:06:25.073+02:00  INFO 11916 --- [shop] [main] rnaouss.cnam.shop.ShopApplication        : Started ShopApplication in 12.067 seconds (process running for 15.658)
+2026-01-21T20:09:52.954+02:00  WARN 11916 --- [shop] [HikariPool-1:housekeeper] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@58f97013 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2026-01-21T20:09:57.370+02:00  WARN 11916 --- [shop] [HikariPool-1:housekeeper] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@892f182 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2026-01-21T20:10:13.600+02:00  WARN 11916 --- [shop] [HikariPool-1:housekeeper] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@e8eff2e (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2026-01-21T20:10:16.601+02:00  WARN 11916 --- [shop] [HikariPool-1:housekeeper] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@32f42647 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2026-01-21T20:10:21.584+02:00  WARN 11916 --- [shop] [HikariPool-1:housekeeper] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@2df5cf7a (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2026-01-21T20:10:24.566+02:00  WARN 11916 --- [shop] [HikariPool-1:housekeeper] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@54fb2265 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2026-01-21T20:10:25.050+02:00  WARN 11916 --- [shop] [HikariPool-1:housekeeper] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@d6c09fa (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2026-01-21T20:10:28.442+02:00  WARN 11916 --- [shop] [HikariPool-1:housekeeper] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@1eb9d00e (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2026-01-21T20:10:28.926+02:00  WARN 11916 --- [shop] [HikariPool-1:housekeeper] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@1d3442bc (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2026-01-21T20:10:42.743+02:00  WARN 11916 --- [shop] [HikariPool-1:housekeeper] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@10d1a375 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
