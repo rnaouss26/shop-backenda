@@ -4,7 +4,6 @@ import org.springframework.web.bind.annotation.*;
 import rnaouss.cnam.shop.model.CartItem;
 import rnaouss.cnam.shop.model.CartItemId;
 import rnaouss.cnam.shop.repo.CartItemRepository;
-import java.util.UUID;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import java.util.List;
