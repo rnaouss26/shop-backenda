@@ -16,7 +16,7 @@ public class DataSeeder {
         return args -> {
             if (repo.count() == 0) {
                repo.save(new Product("T-shirt", new BigDecimal("15.00"), "https://img.rnaouss.org/products/Tshirt.JPG"));
-                repo.save(new Product("Sneakers", new BigDecimal("60.00"), "https://img.rnaouss.org/products/Sneackers.JPG"));
+                repo.save(new Product("Sneakers", new BigDecimal("60.00"), "https://img.rnaouss.org/products/Sneakers.JPG"));
                 repo.save(new Product("Backpack", new BigDecimal("35.00"), "https://img.rnaouss.org/products/Backpack.JPG"));
             }
         };
